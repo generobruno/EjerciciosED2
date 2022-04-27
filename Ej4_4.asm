@@ -1,7 +1,7 @@
 ; Ejercicio 4.4
 ; Escribir un programa que, dependiendo del estado de dos interruptores
 ; conectados a RA4 y RB0, presente en el puerto D diferentes funciones lógicas
-; cuya tabla de verdad se muestra en la guía 
+; cuya tabla de verdad se muestra en la guía .
     
     LIST P=16F887
     #INCLUDE "p16F887.inc"
