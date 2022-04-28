@@ -35,6 +35,9 @@
       <itemPath>Ej4_5.asm</itemPath>
       <itemPath>Ej4_7.asm</itemPath>
       <itemPath>Ej3_11.asm</itemPath>
+      <itemPath>Ej_MPX7Seg.asm</itemPath>
+      <itemPath>Ej_INT_RBO.asm</itemPath>
+      <itemPath>Ej5_2.asm</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -91,6 +94,12 @@
         </mpasmsuite>
       </item>
       <item path="Ej3_11.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej3_12(TODO).asm" ex="true" overriding="false">
         <MPASMWIN-AS>
@@ -213,10 +222,28 @@
         </mpasmsuite>
       </item>
       <item path="Ej4_4.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej4_5.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej4_7.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej_Parcial_1.asm" ex="true" overriding="false">
         <MPASMWIN-AS>
