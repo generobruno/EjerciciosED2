@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Ej_MPX7Seg.asm Ej_INT_RBO.asm Ej5_2.asm
+SOURCEFILES_QUOTED_IF_SPACED=
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Ej_MPX7Seg.o ${OBJECTDIR}/Ej_INT_RBO.o ${OBJECTDIR}/Ej5_2.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Ej_MPX7Seg.o.d ${OBJECTDIR}/Ej_INT_RBO.o.d ${OBJECTDIR}/Ej5_2.o.d
+OBJECTFILES_QUOTED_IF_SPACED=
+POSSIBLE_DEPFILES=
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Ej_MPX7Seg.o ${OBJECTDIR}/Ej_INT_RBO.o ${OBJECTDIR}/Ej5_2.o
+OBJECTFILES=
 
 # Source Files
-SOURCEFILES=Ej_MPX7Seg.asm Ej_INT_RBO.asm Ej5_2.asm
+SOURCEFILES=
 
 
 
@@ -95,55 +95,7 @@ MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Ej_MPX7Seg.o: Ej_MPX7Seg.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_MPX7Seg.o.d 
-	@${RM} ${OBJECTDIR}/Ej_MPX7Seg.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_MPX7Seg.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_MPX7Seg.lst\" -e\"${OBJECTDIR}/Ej_MPX7Seg.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_MPX7Seg.o\" \"Ej_MPX7Seg.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_MPX7Seg.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_MPX7Seg.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej_INT_RBO.o: Ej_INT_RBO.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_INT_RBO.o.d 
-	@${RM} ${OBJECTDIR}/Ej_INT_RBO.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_INT_RBO.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_INT_RBO.lst\" -e\"${OBJECTDIR}/Ej_INT_RBO.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_INT_RBO.o\" \"Ej_INT_RBO.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_INT_RBO.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_INT_RBO.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej5_2.o: Ej5_2.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej5_2.o.d 
-	@${RM} ${OBJECTDIR}/Ej5_2.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej5_2.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej5_2.lst\" -e\"${OBJECTDIR}/Ej5_2.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej5_2.o\" \"Ej5_2.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej5_2.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej5_2.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
 else
-${OBJECTDIR}/Ej_MPX7Seg.o: Ej_MPX7Seg.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_MPX7Seg.o.d 
-	@${RM} ${OBJECTDIR}/Ej_MPX7Seg.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_MPX7Seg.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_MPX7Seg.lst\" -e\"${OBJECTDIR}/Ej_MPX7Seg.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_MPX7Seg.o\" \"Ej_MPX7Seg.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_MPX7Seg.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_MPX7Seg.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej_INT_RBO.o: Ej_INT_RBO.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_INT_RBO.o.d 
-	@${RM} ${OBJECTDIR}/Ej_INT_RBO.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_INT_RBO.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_INT_RBO.lst\" -e\"${OBJECTDIR}/Ej_INT_RBO.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_INT_RBO.o\" \"Ej_INT_RBO.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_INT_RBO.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_INT_RBO.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej5_2.o: Ej5_2.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej5_2.o.d 
-	@${RM} ${OBJECTDIR}/Ej5_2.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej5_2.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej5_2.lst\" -e\"${OBJECTDIR}/Ej5_2.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej5_2.o\" \"Ej5_2.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej5_2.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej5_2.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
 endif
 
 # ------------------------------------------------------------------------------------

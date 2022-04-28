@@ -1,3 +1,6 @@
+; Ejemplo para ver los mecanismos y configuracion de la interrupcion
+; por puerto B.
+    
     LIST P=16F887
     #include <p16f887.inc>
   __CONFIG _CONFIG1, _FOSC_INTRC_NOCLKOUT & _WDTE_OFF & _MCLRE_ON & _LVP_OFF
@@ -17,14 +20,14 @@
 INICIO ; Comienza del programa principal
     BSF	    STATUS,RP0
     CLRF   ANSELH
-    MOVLW   B'11110000'
+    MOVLW   B'11110000'		
     MOVWF   TRISB
-    MOVWF   IOCB
+    MOVWF   IOCB		    ; El nivle superior puede interrumpir
     BCF	    INTCON,RBIF
     BSF	    INTCON,RBIE
     BSF	    INTCON,GIE
     BCF	    STATUS,RP0   
-    MOVF    PORTB,F
+    MOVF    PORTB,F		    ; Leo el puerto B para setear un valor de referencia para el cambio
 BUCLE
     NOP
     NOP
