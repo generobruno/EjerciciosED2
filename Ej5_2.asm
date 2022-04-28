@@ -23,17 +23,17 @@
 	ORG	0x05
 INICIO	;Se configura puerto
 	BANKSEL TRISB	     
-	CLRF	TRISB
-	BSF	TRISB,RB0
-	BCF	OPTION_REG,INTEDG
+	CLRF	TRISB			    ;Puerto B como salida
+	BSF	TRISB,RB0		    ;Salvo RB0 que es entrada
+	BCF	OPTION_REG,INTEDG	    ;La inte. es por flanco de bajada ya que es cada vez que se presione
 	BANKSEL	PORTB
-	CLRF	PORTB
-	BSF	SHIFTREG,0
-	;Se configura interrupci?n por RB0
-	BCF	INTCON,INTF
-	BSF	INTCON,INTE
-	BSF	INTCON,GIE
-	MOVLW	B'11110000'
+	CLRF	PORTB			    
+	BSF	SHIFTREG,0		    ;Registro aux de rotacion 
+	;Se configura interrupcion por RB0
+	BCF	INTCON,INTF		    ;Limpiamos la bandera
+	BSF	INTCON,INTE		    ;Habilitamos INT/RB0
+	BSF	INTCON,GIE		    ;Habilitamos las interrupciones
+	MOVLW	B'11110000'		    ;Esto es para ver si el contexto se esta guardando correctamente
 	GOTO	$
 
 INTER   ;Se guarda contexto    
@@ -41,10 +41,11 @@ INTER   ;Se guarda contexto
 	SWAPF	STATUS,W
 	MOVWF	STATUS_TEMP
 	;Consulta de la fuente a la interrupci?n
-	
+	;AHORA NO SE PONE NADA PORQUE HAY UNA SOLA ENTRADA DE INTERRUPCION
+	;LO QUE HABRIA QUE HACER ES REVISAR LAS FLAGS DE LOS PERIFERICOS
 	;Rutina de servicio a la interrupci?n
 	BCF	STATUS,C
-	RLF	SHIFTREG,F
+	RLF	SHIFTREG,F	;Roto el reg auxiliar
 	MOVLW	0x02
 	BTFSC	SHIFTREG,4
 	MOVWF	SHIFTREG
@@ -56,6 +57,6 @@ SALIR	;Se recupera contexto
 	MOVWF	STATUS	     
 	SWAPF	W_TEMP,F
 	SWAPF	W_TEMP,W
-	BCF	INTCON,INTF
+	BCF	INTCON,INTF	;Volvemos a limpiar la bandera
 	RETFIE
 	END	
