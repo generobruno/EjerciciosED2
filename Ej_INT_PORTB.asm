@@ -22,7 +22,7 @@ INICIO ; Comienza del programa principal
     CLRF   ANSELH
     MOVLW   B'11110000'		
     MOVWF   TRISB
-    MOVWF   IOCB		    ; El nivle superior puede interrumpir
+    MOVWF   IOCB		    ; El nibble superior puede interrumpir
     BCF	    INTCON,RBIF
     BSF	    INTCON,RBIE
     BSF	    INTCON,GIE

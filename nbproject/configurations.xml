@@ -38,6 +38,11 @@
       <itemPath>Ej_MPX7Seg.asm</itemPath>
       <itemPath>Ej5_2.asm</itemPath>
       <itemPath>Ej_INT_PORTB.asm</itemPath>
+      <itemPath>Ej5_3.asm</itemPath>
+      <itemPath>Ej5_4.asm</itemPath>
+      <itemPath>Ej5_5.asm</itemPath>
+      <itemPath>Ej5_6.asm</itemPath>
+      <itemPath>Ej5_7.asm</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -246,10 +251,38 @@
         </mpasmsuite>
       </item>
       <item path="Ej5_2.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej5_3.asm" ex="true" overriding="false">
+      </item>
+      <item path="Ej5_4.asm" ex="true" overriding="false">
+      </item>
+      <item path="Ej5_5.asm" ex="true" overriding="false">
+      </item>
+      <item path="Ej5_6.asm" ex="true" overriding="false">
+      </item>
+      <item path="Ej5_7.asm" ex="true" overriding="false">
       </item>
       <item path="Ej_INT_PORTB.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej_MPX7Seg.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej_Parcial_1.asm" ex="true" overriding="false">
         <MPASMWIN-AS>
