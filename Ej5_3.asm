@@ -16,6 +16,11 @@
 ; __config 0x3FFF
  __CONFIG _CONFIG2, _BOR4V_BOR40V & _WRT_OFF
  
+ 	CBLOCK	0x70
+	STATUS_TEMP
+	W_TEMP
+	ENDC
+ 
 	ORG	0x0
 	GOTO	MAIN
 	ORG	0x4
@@ -48,7 +53,7 @@ INTER
     SWAPF   STATUS,W
     MOVWF   STATUS_TEMP
     ; Servicio de la interrupcion
-    BTFSC   RB1	    
+    BTFSC   RB1		    ;REVISAR!!!!!!!!!!
     BTFSC   RB2
     BTFSS   RB2
     BTFSS   RB1

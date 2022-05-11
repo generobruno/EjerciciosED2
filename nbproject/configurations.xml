@@ -46,6 +46,15 @@
       <itemPath>Ej_ScanTecladoPolling.asm</itemPath>
       <itemPath>Ej_Timer0_2.asm</itemPath>
       <itemPath>Ej_Timer0_1.asm</itemPath>
+      <itemPath>Ej6_3.asm</itemPath>
+      <itemPath>Ej6_4.asm</itemPath>
+      <itemPath>Ej6_7.asm</itemPath>
+      <itemPath>Ej7_1.asm</itemPath>
+      <itemPath>Ej7_3.asm</itemPath>
+      <itemPath>Ej7_5.asm</itemPath>
+      <itemPath>Ej6_1(REVISAR).asm</itemPath>
+      <itemPath>Ej_ScanTecladoInterrupt.asm</itemPath>
+      <itemPath>Ej_Timer0_3.asm</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -301,6 +310,62 @@
         <mpasmsuite>
         </mpasmsuite>
       </item>
+      <item path="Ej6_1(REVISAR).asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej6_3.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej6_4.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej6_7.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej7_1.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej7_3.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej7_5.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
       <item path="Ej_INT_PORTB.asm" ex="true" overriding="false">
         <MPASMWIN-AS>
         </MPASMWIN-AS>
@@ -332,6 +397,34 @@
         </MPASMWIN-LD>
         <mpasmsuite>
         </mpasmsuite>
+      </item>
+      <item path="Ej_ScanTecladoInterrupt.asm" ex="true" overriding="false">
+      </item>
+      <item path="Ej_ScanTecladoPolling.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej_Timer0_1.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej_Timer0_2.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
+      </item>
+      <item path="Ej_Timer0_3.asm" ex="true" overriding="false">
       </item>
       <item path="EjermploTablas.asm" ex="true" overriding="false">
         <MPASMWIN-AS>

@@ -15,7 +15,7 @@ DIGI1 EQU 0x30
 	    ORG 0x05
 INICIO
 	    BSF STATUS,RP0
-	    CLRF TRISA ; pins Puertos A y B todos salida
+	    CLRF TRISA		; pins Puertos A y B todos salida
 	    CLRF TRISB
 	    BSF STATUS,RP1
 	    CLRF ANSEL

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Ej_ScanTecladoPolling.asm Ej_Timer0_2.asm Ej_Timer0_1.asm
+SOURCEFILES_QUOTED_IF_SPACED=
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Ej_ScanTecladoPolling.o ${OBJECTDIR}/Ej_Timer0_2.o ${OBJECTDIR}/Ej_Timer0_1.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Ej_ScanTecladoPolling.o.d ${OBJECTDIR}/Ej_Timer0_2.o.d ${OBJECTDIR}/Ej_Timer0_1.o.d
+OBJECTFILES_QUOTED_IF_SPACED=
+POSSIBLE_DEPFILES=
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Ej_ScanTecladoPolling.o ${OBJECTDIR}/Ej_Timer0_2.o ${OBJECTDIR}/Ej_Timer0_1.o
+OBJECTFILES=
 
 # Source Files
-SOURCEFILES=Ej_ScanTecladoPolling.asm Ej_Timer0_2.asm Ej_Timer0_1.asm
+SOURCEFILES=
 
 
 
@@ -95,55 +95,7 @@ MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Ej_ScanTecladoPolling.o: Ej_ScanTecladoPolling.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_ScanTecladoPolling.o.d 
-	@${RM} ${OBJECTDIR}/Ej_ScanTecladoPolling.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_ScanTecladoPolling.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_ScanTecladoPolling.lst\" -e\"${OBJECTDIR}/Ej_ScanTecladoPolling.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_ScanTecladoPolling.o\" \"Ej_ScanTecladoPolling.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_ScanTecladoPolling.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_ScanTecladoPolling.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej_Timer0_2.o: Ej_Timer0_2.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_2.o.d 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_2.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_Timer0_2.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_Timer0_2.lst\" -e\"${OBJECTDIR}/Ej_Timer0_2.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_Timer0_2.o\" \"Ej_Timer0_2.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_Timer0_2.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_Timer0_2.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej_Timer0_1.o: Ej_Timer0_1.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_1.o.d 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_1.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_Timer0_1.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_Timer0_1.lst\" -e\"${OBJECTDIR}/Ej_Timer0_1.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_Timer0_1.o\" \"Ej_Timer0_1.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_Timer0_1.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_Timer0_1.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
 else
-${OBJECTDIR}/Ej_ScanTecladoPolling.o: Ej_ScanTecladoPolling.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_ScanTecladoPolling.o.d 
-	@${RM} ${OBJECTDIR}/Ej_ScanTecladoPolling.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_ScanTecladoPolling.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_ScanTecladoPolling.lst\" -e\"${OBJECTDIR}/Ej_ScanTecladoPolling.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_ScanTecladoPolling.o\" \"Ej_ScanTecladoPolling.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_ScanTecladoPolling.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_ScanTecladoPolling.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej_Timer0_2.o: Ej_Timer0_2.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_2.o.d 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_2.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_Timer0_2.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_Timer0_2.lst\" -e\"${OBJECTDIR}/Ej_Timer0_2.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_Timer0_2.o\" \"Ej_Timer0_2.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_Timer0_2.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_Timer0_2.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
-${OBJECTDIR}/Ej_Timer0_1.o: Ej_Timer0_1.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_1.o.d 
-	@${RM} ${OBJECTDIR}/Ej_Timer0_1.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Ej_Timer0_1.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Ej_Timer0_1.lst\" -e\"${OBJECTDIR}/Ej_Timer0_1.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Ej_Timer0_1.o\" \"Ej_Timer0_1.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Ej_Timer0_1.o"
-	@${FIXDEPS} "${OBJECTDIR}/Ej_Timer0_1.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
 endif
 
 # ------------------------------------------------------------------------------------
