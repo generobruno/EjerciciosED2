@@ -3,6 +3,7 @@
 ; teclado estándar conectado al puerto B de un microcontrolador PIC 16F887, como
 ; indica la figura. El valor ASCII de la tecla se guardará en el Registros 30H. Se
 ; pide resolución utilizando el método polling.
+; EJERCICIO MODIFICADO: EL TECLADO AHORA ES DE 3X3 CON NUMS DEL 0 AL 8
     
 	    LIST    P=16F887
 	    INCLUDE <p16f887.inc>
@@ -26,53 +27,50 @@
 MAIN
     BANKSEL	ANSELH
     CLRF	ANSELH		    ; PORTB como I/O digital
-    BANKSEL	OPTION_REG
-    BCG		OPTION_REG,NOT_RBPU
+    ;BANKSEL	OPTION_REG
+    ;BCG	OPTION_REG,NOT_RBPU
     BANKSEL	TRISB
     MOVLW	B'11110000'
     MOVWF	TRISB		    ; <B0;B3>: OUT , <B4;B7>: IN
-    MOVWF	WPUB		    ; Resistencias de Pull-up habilitadas
+    ;MOVWF	WPUB		    ; Resistencias de Pull-up habilitadas
     BANKSEL	PORTB
     CLRF	PORTB
 
+; RECORDAR QUE LAS COLUMNAS TIENEN RES DE PULL-DOWN
 SCAN
     CLRF    KEYNUM	    ; contador a cero
-    MOVLW   b'11100000'	    ; valor para primera fila  --> REVISAR COMO ROTAR
+    MOVLW   b'00000001'	    ; valor para primera fila-> Rota el 1 por las res de pull down
     MOVWF   AUX_FILE	    ; RowSelector
 SCAN_NEXT
     MOVF    AUX_FILE,W	    
     MOVWF   PORTB	
-    BTFSS   PORTB,RB0	    ; pregunta si la columna 1 es 0
+    BTFSC   PORTB,RB0	    ; pregunta si la columna 1 es 0
     GOTO    SR_KEY
     INCF    KEYNUM,F
-    BTFSS   PORTB,RB1	    ; pregunta si la columna 2 es 0
+    BTFSC   PORTB,RB1	    ; pregunta si la columna 2 es 0
     GOTO    SR_KEY
     INCF    KEYNUM,F
-    BTFSS   PORTB,RB2	    ; pregunta si la columna 3 es 0
+    BTFSC   PORTB,RB2	    ; pregunta si la columna 3 es 0
     GOTO    SR_KEY
     INCF    KEYNUM,F
-    BTFSS   PORTB,RB3	    ; pregunta si la columna 4 es 0
+    BTFSC   PORTB,RB3	    ; pregunta si la columna 4 es 0
     GOTO    SR_KEY
-    
     BSF	    STATUS,C	    ; ninguna columna es 0
-    RLF	    AUX_FILE,F	    ; corro el bit 0 a la pr?xima fila --> REVISAR SI TENGO Q HACER ALGO MAS
+    RLF	    AUX_FILE,F	    ; corro el bit 0 a la pr?xima fila 
     INCF    KEYNUM,F	    ; incremento el contador
-    MOVLW   .16			    ; --> REVISAR 
+    MOVLW   .10			  
     SUBWF   KEYNUM,W	    ; averig?o si ya testeo las 16 teclas
-    BTFSS   STATUS,Z		; -> REVISAR	
+    BTFSS   STATUS,Z	
     GOTO    SCAN_NEXT	    ; no lleg? a 16, busca pr?xima fila
     GOTO    SCAN	    ; si lleg? a 16, reinicio desde la primera tecla
+
 SR_KEY
     CALL    DELAY
-    ; ACA SE TIENE QUE PASAR EL VAL DE KEYNUM A W Y DESPUES LLAMAR A UNA TABLA
-    ; QUE CONVIERTA EL NUM A ASCII??
-;************************************************************
-;		Rutina de servicio al teclado
-;		....
-    MOVF    KEYNUM,W
+    MOVLW   0x30
+    ADDWF   KEYNUM,W	    ; Le sumamos 30 a KEYNUM para convertirlo a ASCII
     MOVWF   RESULTADO
-;		....
     GOTO    SCAN
+    
 ;************************************************************	
     
 DELAY	

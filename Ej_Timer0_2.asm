@@ -18,7 +18,7 @@ INICIO ;programa principal
 	BSF	STATUS,RP0
 	BSF	STATUS,RP1
 	CLRF	ANSEL
-	MOVLW	B'11010001'  
+	MOVLW	B'11010001' ; Puedo cambiar OPTION_REG directamente ya que WDT esta desactivado por config word 
 	MOVWF	OPTION_REG   
 	BCF	STATUS,RP1
 	CLRF	TRISA
@@ -52,7 +52,7 @@ R_TMR0	;Rutina de servicio a la interrupci?n por timer
     	DECFSZ	CONTA1,F	
 	GOTO	L1	
 	MOVLW	D'5'	
-	MOVWF	CONTA1
+	MOVWF	CONTA1	; Esta var se usa para incrementar la temporizacion de TMR0
 	INCF	FLAG,F
 	BTFSS	FLAG,0
 	BCF	PORTA,0

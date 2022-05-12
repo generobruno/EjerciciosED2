@@ -55,6 +55,7 @@
       <itemPath>Ej6_1(REVISAR).asm</itemPath>
       <itemPath>Ej_ScanTecladoInterrupt.asm</itemPath>
       <itemPath>Ej_Timer0_3.asm</itemPath>
+      <itemPath>Ej6_2.asm</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -399,6 +400,12 @@
         </mpasmsuite>
       </item>
       <item path="Ej_ScanTecladoInterrupt.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="Ej_ScanTecladoPolling.asm" ex="true" overriding="false">
         <MPASMWIN-AS>
@@ -425,6 +432,12 @@
         </mpasmsuite>
       </item>
       <item path="Ej_Timer0_3.asm" ex="true" overriding="false">
+        <MPASMWIN-AS>
+        </MPASMWIN-AS>
+        <MPASMWIN-LD>
+        </MPASMWIN-LD>
+        <mpasmsuite>
+        </mpasmsuite>
       </item>
       <item path="EjermploTablas.asm" ex="true" overriding="false">
         <MPASMWIN-AS>

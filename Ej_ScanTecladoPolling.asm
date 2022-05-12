@@ -52,6 +52,7 @@ SCAN_NEXT
 	    INCF    KEYNUM,F
 	    BTFSS   PORTB,RB7	    ; pregunta si la columna 4 es 0
 	    GOTO    SR_KEY
+	    
 	    BSF	    STATUS,C	    ; ninguna columna es 0
 	    RLF	    AUX_FILE,F	    ; corro el bit 0 a la pr?xima fila
 	    INCF    KEYNUM,F	    ; incremento el contador
